@@ -1,17 +1,22 @@
 import React from "react";
 import bannerImage from "../assets/arrowcut_banner.jpg";
+import SimpleSlider from "./simpleslider";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Hero = () => {
   return (
-    <div className="pl-20 flex flex-col items-start justify-evenly h-[34.375rem] bg-gradient-to-r from-[#161616] via-[#171717] via-[#202020]  to-[#D9D9D9]">
-      <img
+    <div className="pl-20 flex justify-center h-[34.375rem] w-full items-center bg-red">
+      {/* <div className="pl-20 flex flex-col items-start justify-evenly h-[34.375rem] bg-gradient-to-r from-[#161616] via-[#171717] via-[#202020]  to-[#D9D9D9]"> */}
+      {/* <img
         src={bannerImage}
         alt="banner_arrowcut"
         quality={100}
-        // className="w-full h-full object-cover"
-        // fill={true}
-      />
-      <p className="text-[2.635rem] leading-[3.438rem]">
+        className="w-full h-full object-cover"
+        fill={true}
+      /> */}
+      {/* <p className="text-[2.635rem] leading-[3.438rem]">
         <span className="text-red font-extrabold">
           Innovation in Every Cut:
         </span>{" "}
@@ -26,7 +31,8 @@ const Hero = () => {
       </p>
       <button className="bg-red text-white rounded py-4 px-6">
         Get Started
-      </button>
+      </button> */}
+      <SimpleSlider />
     </div>
   );
 };

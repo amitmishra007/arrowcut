@@ -37,6 +37,7 @@ const Footer = () => {
       <div className="w-11/12 flex justify-around items-center">
         <div className="w-1/3">
           <select
+            className="text-white bg-[#282828] border-white rounded"
             name="languages"
             id="lang"
           >

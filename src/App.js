@@ -3,6 +3,7 @@ import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import Products from "./components/products";
 import Footer from "./components/footer";
+import ContactInfo from "./components/contactinfo";
 function App() {
   return (
     <div className="w-screen h-screen">
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Hero />
       <Products />
+      <ContactInfo />
       <Footer />
       {/* </div> */}
     </div>

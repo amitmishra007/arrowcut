@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ArrowCutLogo from "../assets/logo.svg";
-const links = [
+export const links = [
   { url: "/", title: "Home" },
   { url: "/products", title: "Products" },
   { url: "/technologies", title: "Technologies" },
@@ -11,7 +11,7 @@ const links = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+    <div className="h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
       {/* LOGO */}
       <div>
         <img

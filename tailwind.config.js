@@ -5,7 +5,7 @@ module.exports = {
     colors: { red: "#F92424", white: "#FFFFFF" },
     extend: {
       backgroundImage: {
-        "hero-bg": "url('../assets/arrowcut_banner.jpg')",
+        // "hero-bg": "url('../assets/arrowcut_banner.jpg')",
       },
     },
   },

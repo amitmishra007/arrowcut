@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ArrowCutLogo from "../assets/logo.svg";
-const links = [
+export const links = [
   { url: "/", title: "Home" },
   { url: "/products", title: "Products" },
   { url: "/technologies", title: "Technologies" },

@@ -2,14 +2,18 @@ import "./App.css";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import Products from "./components/products";
-import RatingCard from "./components/ratingCard"
+import Footer from "./components/footer";
+import ContactInfo from "./components/contactinfo";
 function App() {
   return (
     <div className="w-screen h-screen">
-     <Navbar />
-        <Hero />
-        <Products />
-        <RatingCard/>
+      {/* <div className="h-24"> */}
+      <Navbar />
+      <Hero />
+      <Products />
+      <ContactInfo />
+      <Footer />
+      {/* </div> */}
     </div>
   );
 }

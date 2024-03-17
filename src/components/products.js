@@ -1,41 +1,50 @@
 import React from "react";
 import ProductCard from "./productCard";
-import Test from "./test";
+
 
 const Products = () => {
-  const tet = [{ a: "asb" }, { a: "ff" }, { a: "fsds" }];
+
   const productList = [
-    { title: "Carbide drill" },
-    { title: "Carbide End Mill" },
-    { title: "Carbide Reamer" },
-    { title: "Cutomized tool" },
-    { title: "Flat End Mill" },
-    { title: "Indexable tool" },
-  ];
-  console.log(productList.length, "KKLKAM");
-  console.log("KKLKAM");
+    {
+      "title": "Carbide drill",
+      "image": "/img/carbidedrillImg.png"
+    },
+    {
+      "title": "Carbide End Mill",
+      "image": "/img/carbideEndMIllImg.png"
+    },
+    {
+      "title": "Carbide Reamer",
+      "image": "/img/carbideReamerImg.png"
+    },
+    {
+      "title": "Cutomized tool",
+      "image": "/img/carbidedrillImg.png"
+    },
+    {
+      "title": "Flat End Mill",
+      "image": "/img/carbideEndMIllImg.png"
+    },
+    {
+      "title": "Indexable tool",
+      "image": "/img/carbideReamerImg.png"
+    }
+  ]
+  ;
+
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center pt-[80px] pb-[80px]">
       <div>
         <p className="font-bold text-[2.635rem]">
           <span>Explore Our Best </span>
           <span className="text-red">Product Categories</span>
         </p>
       </div>
-      <div className="flex gap-10 justify-between flex-wrap px-36">
-        {productList.map((item, i) => (
-          <div key={`${item.title}_key_${i}`}>
-            <Test title={item.title} />
-          </div>
-        ))}
-        {tet.map((product) => {
-          <ProductCard
-          // key={`${product.a}_card`}
-          // title={product.a}
-          // url={"google.com"}
-          />;
-        })}
-      </div>
+      <div className="grid grid-cols-3 gap-[24px]	max-w-[1152px] w-full mx-auto mt-[48px]">
+      {productList.map((product, index) => (
+        <ProductCard key={index} title={product.title} image={product.image}/>
+      ))}
+    </div>
     </div>
   );
 };

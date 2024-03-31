@@ -13,20 +13,20 @@ const Footer = () => {
     { label: "HI", value: "Hindi" },
   ];
   return (
-    <div className="flex flex-col items-center justify-evenly h-[25rem] w-full bg-[#282828]">
+    <div className="flex flex-col items-center justify-evenly h-[25rem] w-full bg-[#282828] py-2">
       <img
         src={logo}
         alt="footer_logo_arrowcut"
         width={167.87}
         height={38.32}
       />
-      <div className="w-1/3 flex justify-between items-center">
+      <div className="w-1/3 flex flex-col gap-5 justify-between items-center">
         {links.map(
-          (link) =>
+          (link, i) =>
             link.title !== "Contact Us" && (
               <a
                 className="text-white"
-                key={`${link.title}_regular_menu`}
+                key={`${link.title}_regular_menu_${i}`}
                 href={link.url}
               >
                 {link.title}
@@ -34,19 +34,26 @@ const Footer = () => {
             )
         )}
       </div>
-      <div className="w-11/12 flex justify-around items-center">
-        <div className="w-1/3">
-          <select
-            className="text-white bg-[#282828] border-white rounded"
-            name="languages"
-            id="lang"
-          >
-            {Countries.map((lang) => (
-              <option value={lang.value}>{lang.label}</option>
-            ))}
-          </select>
+      <div className=" w-11/12 flex flex-col lg:flex-row gap-5 justify-between items-center">
+        <div className="h-1/3 lg:w-1/3 lg:basis-full flex items-start">
+          <div className="sm:flex md:flex sm:items-center md:items-center border-white border-2 rounded">
+            <select
+              className="text-white bg-[#282828] border-white rounded cursor-pointer"
+              name="languages"
+              id="lang"
+            >
+              {Countries.map((lang, i) => (
+                <option
+                  key={`${lang.title}_regular_menu_${i}`}
+                  value={lang.value}
+                >
+                  {lang.label}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
-        <div className="w-1/3 flex justify-center gap-12 items-center ">
+        <div className="h-1/3 lg:w-1/3  lg:basis-full flex justify-center gap-12 items-center">
           <a href="https://www.facebook.com/">
             <img
               src={fblogo}
@@ -72,7 +79,7 @@ const Footer = () => {
             />
           </a>
         </div>
-        <div className="w-1/3 flex items-center justify-end">
+        <div className="h-1/3 lg:w-1/3 lg:basis-full flex items-center justify-end">
           <p className="text-white">
             © Copyright {new Date().getFullYear()} All Rights Reserved
           </p>

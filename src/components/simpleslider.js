@@ -2,15 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 
 function SimpleSlider({ bannerImage }) {
-  // const myStyle = {
-  //   backgroundImage: `url(${bannerImage})`,
-  //   height: "100%",
-  //   width: "100%",
-  //   marginTop: "-70px",
-  //   fontSize: "50px",
-  //   backgroundSize: "cover",
-  //   backgroundRepeat: "no-repeat",
-  // };
   const settings = {
     // dots: true,
     infinite: true,
@@ -33,31 +24,28 @@ function SimpleSlider({ bannerImage }) {
               fill={true}
             />
           </div>
-          <div className="absolute top-[30%] left-[10%] w-full transform -translate-x-10 -translate-y-30">
-            <p className="text-[2.635rem] leading-[3.438rem]">
+          <div className="absolute top-[6%] lg:top-[30%] left-[20%] lg:left-[10%] w-full transform -translate-x-10 -translate-y-30">
+            <p className="text-[1rem] lg:leading-[3.438rem]">
               <span className="text-red font-extrabold">
                 Innovation in Every Cut:
               </span>
               <span className="text-white font-bold">
-              &nbsp;
-                  Your Trusted <br />
+                &nbsp; Your Trusted <br />
                 Source for Cutting-Edge Tools
               </span>
             </p>
 
-            <p className="text-white text-[16px] font-[400] leading-[1.219rem] pt-[16px] pb-[32px]">
+            <p className="text-white text-[8px] lg:text-[16px] font-[400] lg:leading-[1.219rem] pt-[8px] lg:pt-[16px] pb-[16px] lg:pb-[32px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod temetfdorpor incididunt ut labore et
+              eiusmod <br /> temetfdorpor incididunt ut labore et
             </p>
 
-            <button className="bg-red text-white rounded py-4 px-6 text-[20px] font-[600]">
+            <button className="bg-red text-white rounded py-1 lg:py-4 px-2 lg:px-6 lg:text-[20px] font-[600]">
               Get Started
             </button>
           </div>
         </div>
-        <div
-
-        >
+        <div>
           <h3>2</h3>
         </div>
         <div>

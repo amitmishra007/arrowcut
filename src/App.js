@@ -6,7 +6,7 @@ import Footer from "./components/footer";
 import ContactInfo from "./components/contactinfo";
 function App() {
   return (
-    <div className="w-screen h-screen">
+    <div className="arrowcut_app w-screen h-screen">
       {/* <div className="h-24"> */}
       <Navbar />
       <Hero />
@@ -19,4 +19,3 @@ function App() {
 }
 
 export default App;
-  

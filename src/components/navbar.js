@@ -21,7 +21,7 @@ const Navbar = () => {
           height={36.32}
         />
       </div>
-      <div className="hidden md:flex items-center gap-4 w-6/12">
+      <div className="hidden lg:flex items-center gap-4 w-6/12">
         {links.map((link) =>
           link.title === "Contact Us" ? (
             <button
@@ -55,7 +55,16 @@ const Navbar = () => {
         </button>
         {/* MENU LIST */}
         {open && (
-          <div className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl">
+          <div className="absolute top-0 left-0 w-screen h-screen bg-gradient-to-tl from-white to-black text-white flex flex-col items-center justify-center gap-8 text-xl">
+            {/* LOGO */}
+            <div>
+              <img
+                src={ArrowCutLogo}
+                alt="arrowcut_logo"
+                width={159}
+                height={36.32}
+              />
+            </div>
             {links.map((link) => (
               <a
                 key={`${link.title}_hamburger_menu`}

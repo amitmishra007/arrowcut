@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import ArrowCutLogo from "../assets/logo.svg";
+import fblogo from "../assets/fb_icon.svg";
+import xlogo from "../assets/x_logo.svg";
+import instalogo from "../assets/insta_logo.svg";
+import youtubelogo from "../assets/youtube_logo.svg";
+import { motion, MotionConfig } from "framer-motion";
 export const links = [
   { url: "/", title: "Home" },
   { url: "/products", title: "Products" },
@@ -9,6 +14,7 @@ export const links = [
 ];
 
 const Navbar = () => {
+  const containerVars = { initial: { transition: { staggerChildren: 0.9 } } };
   const [open, setOpen] = useState(false);
   return (
     <div className="h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
@@ -45,17 +51,69 @@ const Navbar = () => {
       {/* RESPONSIVE MENU */}
       <div className="lg:hidden xl:hidden">
         {/* MENU BUTTON */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="w-10 h-8 flex flex-col justify-between z-50 relative"
-        >
-          <div className="w-10 h-1 bg-white rounded"></div>
-          <div className="w-10 h-1 bg-white rounded"></div>
-          <div className="w-10 h-1 bg-white rounded"></div>
-        </button>
+        <MotionConfig transition={{ duration: 0.5, ease: "easeInOut" }}>
+          <motion.button
+            initial={false}
+            onClick={() => setOpen(!open)}
+            className="w-20 h-20 z-20 relative hover:bg-white/20 transition-colors rounded-full"
+            animate={open ? "open" : "closed"}
+          >
+            <motion.span
+              style={{ left: "50%", top: "35%", x: "-50%", y: "-50%" }}
+              className="absolute w-10 h-1 bg-[#282828] rounded"
+              variants={{
+                open: {
+                  rotate: ["0deg", "0deg", "45deg"],
+                  top: ["35%", "50%", "50%"],
+                },
+
+                closed: {
+                  rotate: ["45deg", "0deg", "0deg"],
+                  top: ["50%", "50%", "35%"],
+                },
+              }}
+            ></motion.span>
+            <motion.span
+              style={{ left: "50%", top: "50%", x: "-50%", y: "-50%" }}
+              className="absolute w-10 h-1 bg-[#282828] rounded"
+              variants={{
+                open: {
+                  rotate: ["0deg", "0deg", "-45deg"],
+                  top: ["35%", "50%", "50%"],
+                },
+                closed: {
+                  rotate: ["-45deg", "0deg", "0deg"],
+                  top: ["50%", "50%", "35%"],
+                },
+              }}
+            ></motion.span>
+            <motion.span
+              style={{
+                left: "calc(50% + 10px)",
+                bottom: "35%",
+                x: "-50%",
+                y: "50%",
+              }}
+              className="absolute w-5 h-1 bg-[#282828] rounded"
+              variants={{
+                open: {
+                  rotate: ["0deg", "0deg", "45deg"],
+                  left: "50%",
+                  bottom: ["50%", "50%", "35%"],
+                  visibility: "hidden",
+                },
+                closed: {
+                  rotate: ["45deg", "0deg", "0deg"],
+                  left: "calc(50% + 10px)",
+                  bottom: ["35%", "50%", "50%"],
+                },
+              }}
+            ></motion.span>
+          </motion.button>
+        </MotionConfig>
         {/* MENU LIST */}
         {open && (
-          <div className="absolute top-0 left-0 w-screen h-screen bg-gradient-to-tl from-white to-black text-white flex flex-col items-center justify-center gap-8 text-xl">
+          <div className="absolute top-0 left-0 w-screen h-screen bg-gradient-to-tl from-red to-white text-white flex flex-col items-center justify-center gap-8 text-xl z-10">
             {/* LOGO */}
             <div>
               <img
@@ -63,16 +121,47 @@ const Navbar = () => {
                 alt="arrowcut_logo"
                 width={159}
                 height={36.32}
+                className="drop-shadow-md pb-5"
               />
             </div>
-            {links.map((link) => (
-              <a
-                key={`${link.title}_hamburger_menu`}
-                href={link.url}
-              >
-                {link.title}
+
+            <div className="py-5 flex flex-col items-center justify-center gap-8">
+              {links.map((link) => (
+                <a
+                  key={`${link.title}_hamburger_menu`}
+                  href={link.url}
+                  className="drop-shadow-lg"
+                >
+                  {link.title}
+                </a>
+              ))}
+            </div>
+            <div className="w-2/3 flex justify-between items-center drop-shadow-md pt-5">
+              <a href="https://www.facebook.com/">
+                <img
+                  src={fblogo}
+                  alt="fb_logo"
+                />
               </a>
-            ))}
+              <a href="https://www.x.com/">
+                <img
+                  src={xlogo}
+                  alt="x_logo"
+                />
+              </a>
+              <a href="https://www.youtube.com/">
+                <img
+                  src={youtubelogo}
+                  alt="youtube_logo"
+                />
+              </a>
+              <a href="https://www.instagram.com/">
+                <img
+                  src={instalogo}
+                  alt="instagram_logo"
+                />
+              </a>
+            </div>
           </div>
         )}
       </div>

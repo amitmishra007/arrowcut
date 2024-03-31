@@ -15,6 +15,7 @@ export const links = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
   return (
     <div className="h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
       {/* LOGO */}
@@ -30,7 +31,7 @@ const Navbar = () => {
         {links.map((link) =>
           link.title === "Contact Us" ? (
             <button
-              className="absolute right-20 bg-red text-white rounded py-2.5 pl-2.5 pr-4"
+              className="lg:absolute right-20 bg-red text-white rounded py-2.5 pl-2.5 pr-4"
               key={`${link.title}_regular_menu`}
               href={link.url}
             >

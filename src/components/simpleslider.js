@@ -3,7 +3,8 @@ import Slider from "react-slick";
 
 function SimpleSlider({ bannerImage }) {
   const settings = {
-    // dots: true,
+    dots: false,
+    arrows: false,
     infinite: true,
     autoplay: true,
     speed: 500,
@@ -21,11 +22,11 @@ function SimpleSlider({ bannerImage }) {
               alt="banner_arrowcut"
               quality={100}
               className="w-full h-full object-cover"
-              fill={true}
+              fill={true.toString()}
             />
           </div>
-          <div className="absolute top-[6%] lg:top-[30%] left-[20%] lg:left-[10%] w-full transform -translate-x-10 -translate-y-30">
-            <p className="text-[1rem] lg:text-[2.635rem] lg:leading-[3.438rem]">
+          <div className="absolute top-[6%] md:top-[15%] lg:top-[30%] left-[20%] md:left-[15%] lg:left-[10%] w-full transform -translate-x-10 -translate-y-30">
+            <p className="text-[1rem] md:text-[1.8rem] lg:text-[2.635rem] lg:leading-[3.438rem]">
               <span className="text-red font-extrabold">
                 Innovation in Every Cut:
               </span>
@@ -35,13 +36,13 @@ function SimpleSlider({ bannerImage }) {
               </span>
             </p>
 
-            <p className="text-white text-[8px] lg:text-[16px] font-[400] lg:leading-[1.219rem] pt-[8px] lg:pt-[16px] pb-[16px] lg:pb-[32px]">
+            <p className="text-white text-[8px] md:text-[14px] lg:text-[16px] font-[400] lg:leading-[1.219rem] pt-[8px] lg:pt-[16px] pb-[16px] lg:pb-[32px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod temetfdorpor
               <br /> incididunt ut labore et
             </p>
 
-            <button className="bg-red text-white rounded py-1 lg:py-4 px-2 lg:px-6 lg:text-[20px] font-[600]">
+            <button className="bg-red text-white rounded py-1 md:py-2 lg:py-4 px-2 md:px-4 lg:px-6 lg:text-[20px] font-[600]">
               Get Started
             </button>
           </div>

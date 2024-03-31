@@ -32,6 +32,9 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      lineHeight: {
+        featprodtitle: "30px",
+      },
     },
   },
   plugins: [],

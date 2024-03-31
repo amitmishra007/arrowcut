@@ -14,7 +14,6 @@ export const links = [
 ];
 
 const Navbar = () => {
-  const containerVars = { initial: { transition: { staggerChildren: 0.9 } } };
   const [open, setOpen] = useState(false);
   return (
     <div className="h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">

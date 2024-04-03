@@ -13,11 +13,17 @@ export const links = [
   { url: "/contact", title: "Contact Us" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ scrollPosition }) => {
   const [open, setOpen] = useState(false);
-
+  console.log(`Scroll Position ${scrollPosition.scrollTop}`);
   return (
-    <div className="h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+    <div
+      className={
+        scrollPosition.scrollTop <= 1
+          ? "h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48"
+          : "hidden h-24 items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48"
+      }
+    >
       {/* LOGO */}
       <div>
         <img

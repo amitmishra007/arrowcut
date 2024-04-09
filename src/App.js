@@ -7,6 +7,8 @@ import ContactInfo from "./components/contactinfo";
 import FeaturedProducts from "./components/featuredProducts";
 import { useRef, useState } from "react";
 import ChooseUs from "./components/chooseUs";
+import Customer from "./components/customer";
+import ToolManufacturer from "./components/toolManufacturer";
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState({
@@ -34,6 +36,8 @@ function App() {
       <Products />
       <FeaturedProducts />
       <ChooseUs />
+      <ToolManufacturer />
+      <Customer />
       <ContactInfo />
       <Footer />
     </main>

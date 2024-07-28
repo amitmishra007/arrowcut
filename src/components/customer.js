@@ -44,11 +44,22 @@ const Customer = () => {
           John Smith
         </b>
       </div>
-      <img
-        className="absolute top-[23.75rem] left-[58.563rem] w-[6rem] h-[2.5rem]"
-        alt=""
-        src="/group-625949.svg"
-      />
+      <div className="absolute top-[23.75rem] left-[58.65rem] w-auto h-[2.6rem] flex">
+        <button>
+          <img
+            className=" w-[3rem] h-[2.5rem]"
+            alt="arrow-left-circle"
+            src="/img/arrow-left-circle.svg"
+          />
+        </button>
+        <button>
+          <img
+            className=" w-[3rem] h-[2.5rem]"
+            alt="arrow-right-circle"
+            src="/img/arrow-right-circle.svg"
+          />
+        </button>
+      </div>
     </div>
   );
 };

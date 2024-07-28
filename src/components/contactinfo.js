@@ -5,7 +5,7 @@ import callUsImg from "../assets/mail_us_img.svg";
 
 const ContactInfo = () => {
   return (
-    <div className="py-10 lg:py-10 xl:py-16 h-[28.125rem] md:h-[28.125rem] lg:h-[28.125rem] xl:h-[38.125rem] w-full flex items-center justify-center">
+    <div className="py-10 lg:py-10 xl:py-16 min-h-[28.125rem] md:h-[28.125rem] lg:h-[28.125rem] xl:h-[38.125rem] w-full flex items-center justify-center">
       <div className="relative w-full h-full lg-h-auto md:w-4/5 lg:w-4/5 ">
         <img
           className="w-full h-full lg:h-auto rounded"

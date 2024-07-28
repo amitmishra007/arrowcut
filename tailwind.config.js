@@ -8,6 +8,7 @@ module.exports = {
       black: "#000000",
       lwhite: "#FFFFFF0",
       lblack: "#00000090",
+      lred: "#F9242480",
     },
     screens: {
       sm: "640px",

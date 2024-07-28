@@ -5,6 +5,7 @@ import xlogo from "../assets/x_logo.svg";
 import instalogo from "../assets/insta_logo.svg";
 import youtubelogo from "../assets/youtube_logo.svg";
 import { motion, MotionConfig } from "framer-motion";
+
 export const links = [
   { url: "/", title: "Home" },
   { url: "/products", title: "Products" },
@@ -13,9 +14,11 @@ export const links = [
   { url: "/contact", title: "Contact Us" },
 ];
 
-const Navbar = ({ scrollPosition }) => {
+const linkPath = window?.location?.pathname;
+
+const Navbar = ({ scrollPosition, scroll }) => {
   const [open, setOpen] = useState(false);
-  console.log(`Scroll Position ${scrollPosition.scrollTop}`);
+
   return (
     <div
       className={
@@ -33,22 +36,27 @@ const Navbar = ({ scrollPosition }) => {
           height={36.32}
         />
       </div>
-      <div className="hidden lg:flex items-center gap-4 w-6/12">
-        {links.map((link) =>
-          link.title === "Contact Us" ? (
-            <button
-              className="lg:absolute right-20 bg-red text-white rounded py-2.5 pl-2.5 pr-4"
-              key={`${link.title}_regular_menu`}
-              href={link.url}
-            >
-              {link.title}
+      <div className="hidden lg:flex items-start gap-4 w-[77%]">
+        {links.map((link, idx) =>
+          link.title === "Contact Us" &&
+          linkPath !== "/contact" &&
+          scroll < 23 ? (
+            <button key={`${link.title}_item_key${idx}`}>
+              <a
+                className="lg:absolute top-6 right-20 bg-red text-white rounded py-2.5 pl-2.5 pr-4"
+                key={`${link.title}_regular_menu`}
+                href={link.url}
+              >
+                {link.title}
+              </a>
             </button>
           ) : (
-            <a
-              key={`${link.title}_regular_menu`}
-              href={link.url}
-            >
-              {link.title}
+            <a key={`${link.title}_regular_menu`} href={link.url}>
+              {linkPath === link.url && idx !== 4 ? (
+                <span className="font-bold"> {link.title}</span>
+              ) : (
+                link.title !== "Contact Us" && <span> {link.title}</span>
+              )}
             </a>
           )
         )}
@@ -144,28 +152,16 @@ const Navbar = ({ scrollPosition }) => {
             </div>
             <div className="w-2/3 flex justify-between items-center drop-shadow-md pt-5">
               <a href="https://www.facebook.com/">
-                <img
-                  src={fblogo}
-                  alt="fb_logo"
-                />
+                <img src={fblogo} alt="fb_logo" />
               </a>
               <a href="https://www.x.com/">
-                <img
-                  src={xlogo}
-                  alt="x_logo"
-                />
+                <img src={xlogo} alt="x_logo" />
               </a>
               <a href="https://www.youtube.com/">
-                <img
-                  src={youtubelogo}
-                  alt="youtube_logo"
-                />
+                <img src={youtubelogo} alt="youtube_logo" />
               </a>
               <a href="https://www.instagram.com/">
-                <img
-                  src={instalogo}
-                  alt="instagram_logo"
-                />
+                <img src={instalogo} alt="instagram_logo" />
               </a>
             </div>
           </div>

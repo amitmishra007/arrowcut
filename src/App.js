@@ -1,14 +1,11 @@
 import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+
 import Navbar from "./components/navbar";
-import Hero from "./components/hero";
-import Products from "./components/products";
-import Footer from "./components/footer";
-import ContactInfo from "./components/contactinfo";
-import FeaturedProducts from "./components/featuredProducts";
 import { useRef, useState } from "react";
-import ChooseUs from "./components/chooseUs";
-import Customer from "./components/customer";
-import ToolManufacturer from "./components/toolManufacturer";
+import Footer from "./components/footer";
+
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState({
@@ -24,21 +21,24 @@ function App() {
     }
   };
 
+  const [scroll, setScroll] = useState(0);
+  const onScroll = () => {
+    const scrollY = window?.scrollY;
+    const scrollTop = document.getElementById("test").scrollTop;
+
+    setScroll(scrollTop);
+  };
+
   return (
     <main
+      id="test"
+      onScroll={onScroll}
       className="arrowcut_app w-screen h-screen"
-      ref={scrollDemoRef}
-      onScroll={handleScroll}
     >
-      {/* <div className="h-24"> */}
-      <Navbar scrollPosition={scrollPosition} />
-      <Hero />
-      <Products />
-      <FeaturedProducts />
-      <ChooseUs />
-      <ToolManufacturer />
-      <Customer />
-      <ContactInfo />
+      <Navbar scrollPosition={scrollPosition} scroll={scroll} />
+      <Router>
+        <AnimatedRoutes />
+      </Router>
       <Footer />
     </main>
   );

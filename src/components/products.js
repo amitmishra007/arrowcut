@@ -31,13 +31,13 @@ const Products = ({ loc }) => {
   return (
     <div className="flex flex-col items-center pt-[80px] pb-[80px] px-2">
       <div className="text-center lg:text-left">
-        {loc?.pathname != "/products" && (
+        {loc?.pathname !== "/products" && (
           <p className="font-bold text-[2rem]  lg:text-[2.635rem]">
             <span>Explore Our Best </span>
             <span className="text-red">Product Categories</span>
           </p>
         )}
-        {loc?.pathname != "/" && (
+        {loc?.pathname === "/products" && (
           <p className="font-bold text-[2rem]  lg:text-[2.635rem] font-[#282828]">
             <span>Explore Other Items </span>
           </p>

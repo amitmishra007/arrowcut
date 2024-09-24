@@ -5,8 +5,10 @@ import xlogo from "../assets/x_logo.svg";
 import instalogo from "../assets/insta_logo.svg";
 import youtubelogo from "../assets/youtube_logo.svg";
 import { links } from "./navbar";
+import { useResponsiveJSX } from "./useResponsive";
 
 const Footer = () => {
+  const breakpoint = useResponsiveJSX([600, 900, 1200]);
   const Countries = [
     { label: "EN", value: "English" },
     { label: "KO", value: "Korean" },
@@ -20,7 +22,13 @@ const Footer = () => {
         width={167.87}
         height={38.32}
       />
-      <div className="w-1/3 flex flex-col gap-5 justify-between items-center">
+      <div
+        className={
+          breakpoint === 0
+            ? "w-1/3 flex flex-col gap-5 justify-between items-center"
+            : "w-1/3 flex gap-5 justify-between items-center"
+        }
+      >
         {links.map(
           (link, i) =>
             link.title !== "Contact Us" && (
@@ -55,28 +63,16 @@ const Footer = () => {
         </div>
         <div className="h-1/3 lg:w-1/3  lg:basis-full flex justify-center gap-12 items-center">
           <a href="https://www.facebook.com/">
-            <img
-              src={fblogo}
-              alt="fb_logo"
-            />
+            <img src={fblogo} alt="fb_logo" />
           </a>
           <a href="https://www.x.com/">
-            <img
-              src={xlogo}
-              alt="x_logo"
-            />
+            <img src={xlogo} alt="x_logo" />
           </a>
           <a href="https://www.youtube.com/">
-            <img
-              src={youtubelogo}
-              alt="youtube_logo"
-            />
+            <img src={youtubelogo} alt="youtube_logo" />
           </a>
           <a href="https://www.instagram.com/">
-            <img
-              src={instalogo}
-              alt="instagram_logo"
-            />
+            <img src={instalogo} alt="instagram_logo" />
           </a>
         </div>
         <div className="h-1/3 lg:w-1/3 lg:basis-full flex items-center justify-end">

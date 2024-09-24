@@ -2,7 +2,7 @@ import React from "react";
 import globeImg from "../assets/globesvg.svg";
 import hundredImg from "../assets/100img.png";
 import starsImg from "../assets/startsImg.svg";
-import johnSmithImg from "../assets/johnSmithImg.png";
+import leeJongSuk from "../assets/leejongSuk.png";
 
 const Customer = () => {
   return (
@@ -21,30 +21,31 @@ const Customer = () => {
         alt=""
         src={globeImg}
       />
-      <div className="absolute top-[5.938rem] left-[42.25rem] rounded-md bg-white shadow-[0px_2px_20px_rgba(0,_0,_0,_0.08)] w-[38.688rem] h-[16.313rem] overflow-hidden text-left text-[0.875rem] text-dimgray">
-        <div className="absolute top-[7.938rem] left-[calc(50%_-_248.5px)] tracking-[0.05em] leading-[170%] inline-block w-[31.125rem] h-[4.813rem]">
-          <p className="m-0">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod terwrmpor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, qxxscs ffuis nostrud exercitation.
+      <div className="absolute top-[5.938rem] left-[42.25rem] rounded-md bg-white shadow-[0px_2px_20px_rgba(0,_0,_0,_0.08)] w-[38.688rem] h-[18rem] overflow-hidden text-left text-[0.875rem] text-dimgray">
+        <div className="absolute top-[7.938rem] left-[calc(50%_-_248.5px)] tracking-[0.05em] leading-[170%] inline-block w-[32.125rem] h-[4.813rem]">
+          <p className="m-0 text-center">
+            "I've been using Arrow-Cut end mills and drills for a few months now
+            and I'm incredibly impressed. The quality is exceptional - these
+            tools are incredibly durable and precise. They've significantly
+            improved our production efficiency and reduced tool breakage.
           </p>
           <p className="m-0">&nbsp;</p>
         </div>
         <img
-          className="absolute top-[13.625rem] left-[16.688rem] w-[5.313rem] h-[0.919rem]"
-          alt=""
+          className="absolute top-[16rem] left-[16.688rem] w-[5.313rem] h-[0.919rem]"
+          alt="stars_img"
           src={starsImg}
         />
         <img
           className="absolute top-[1.688rem] left-[calc(50%_-_24.5px)] rounded-[50%] w-[3.125rem] h-[3.125rem] object-cover"
-          alt=""
-          src={johnSmithImg}
+          alt="lee_jong_suk_img"
+          src={leeJongSuk}
         />
         <b className="absolute top-[5.688rem] left-[calc(50%_-_53.5px)] text-[1.125rem] text-gray-200">
-          John Smith
+          Lee Jong Suk
         </b>
       </div>
-      <div className="absolute top-[23.75rem] left-[58.65rem] w-auto h-[2.6rem] flex">
+      <div className="absolute top-[24.75rem] left-[58.65rem] w-auto h-[2.6rem] flex">
         <button>
           <img
             className=" w-[3rem] h-[2.5rem]"

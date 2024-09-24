@@ -4,11 +4,8 @@ const ProductCard = ({ title, image, index }) => {
   return (
     <>
       <div className="border-[1px] border-[#282828] rounded-[6px] p-[20px]">
-        <div className="border-b-[1px] border-[#BABABA] flex items-center justify-center">
-          <img
-            src={image}
-            alt="productImgage"
-          />
+        <div className="border-b-[1px] border-[#BABABA] flex items-center justify-center w-full h-4/5">
+          <img src={image} alt="productImgage" />
         </div>
         <div className="flex items-center justify-between pt-[31px]">
           <h2 className=" text-[14px] lg:text-[20px] font-[700]">{title}</h2>

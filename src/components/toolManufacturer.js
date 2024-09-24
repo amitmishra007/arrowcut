@@ -20,17 +20,24 @@ const ToolManufacturer = () => {
         </div>
         <div className="absolute text-sm text-justify font-normal top-[9.063rem] left-[calc(50%_+_124px)] inline-block w-[28.25rem] h-[5.5rem]">
           <p className="m-0 whitespace-pre-wrap">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad
-            minim veniam, quis nostrud exercitation ullamco lbris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit
-            in voluptate velit esse cillum dolore eu fugiat nla
+            We specialise in the{" "}
+            <b>
+              design, development, manufacture and sale of end mills, drills,
+              thread milling cutters, boring cutters, reamers,
+            </b>
+            which are manufactured using ANCA advanced equipment in South Korea
+            and undergo strict quality control procedures to ensure high
+            quality. 
           </p>
           <p className="m-0">&nbsp;</p>
 
           <p className="m-0 whitespace-pre-wrap">
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nul
+            We believe in building strong partnerships with our customers.{" "}
+            <b>
+              Our dedicated support team is always ready to assist you in
+              selecting the right tools
+            </b>{" "}
+            for your application and optimizing your machining processes.
           </p>
           <p className="m-0">&nbsp;</p>
         </div>

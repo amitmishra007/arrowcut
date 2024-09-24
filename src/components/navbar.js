@@ -51,7 +51,11 @@ const Navbar = ({ scrollPosition, scroll }) => {
               </a>
             </button>
           ) : (
-            <a key={`${link.title}_regular_menu`} href={link.url}>
+            <a
+              className="mr-10"
+              key={`${link.title}_regular_menu`}
+              href={link.url}
+            >
               {linkPath === link.url && idx !== 4 ? (
                 <span className="font-bold"> {link.title}</span>
               ) : (

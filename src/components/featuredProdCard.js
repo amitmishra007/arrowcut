@@ -5,7 +5,9 @@ const FeaturedProdCard = ({ imgs, title, desc }) => {
   return (
     <div className="w-[16.813rem] h-[23.5rem] bg-[#282828] flex flex-col items-center justify-between rounded-md p-6 snap-center">
       <img
-        className="w-[10.188rem] h-[7.75rem]"
+        className="max-w-[10.188rem] max-h-[7.75rem]"
+        // width={148.9}
+        // height={66}
         src={imgs}
         alt="featured_productt_img"
       />
@@ -17,11 +19,7 @@ const FeaturedProdCard = ({ imgs, title, desc }) => {
         <span className="pl-4 text-sm text-white font-semibold leading-6">
           Explore
         </span>
-        <img
-          src={arrowRight}
-          alt={`${title}_alt_img`}
-          className="pr-2"
-        />
+        <img src={arrowRight} alt={`${title}_alt_img`} className="pr-2" />
       </button>
     </div>
   );

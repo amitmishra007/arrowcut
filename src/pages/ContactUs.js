@@ -15,8 +15,7 @@ const ContactUs = () => {
               Contact Us
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-              gentrify.
+              Overcome Machining Challenges with Arrow-Cut.
             </p>
           </div>
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
@@ -73,9 +72,9 @@ const ContactUs = () => {
               <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                 <a className="text-lred">info@arrowcut.com</a>
                 <p className="leading-normal my-5">
-                  49 Smith St.
+                  Or Call Us
                   <br />
-                  Saint Cloud, SK 56301
+                  +001 6547 6589
                 </p>
               </div>
             </div>

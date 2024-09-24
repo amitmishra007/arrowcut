@@ -37,9 +37,7 @@ function SimpleSlider({ bannerImage }) {
         </p>
 
         <p className="text-white text-[8px] md:text-[14px] lg:text-[16px] font-[400] lg:leading-[1.219rem] pt-[8px] lg:pt-[16px] pb-[16px] lg:pb-[32px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod temetfdorpor
-          <br /> incididunt ut labore et
+          Overcome Machining Challenges with Arrow-Cut.
         </p>
 
         <button className="bg-red text-white rounded py-1 md:py-2 lg:py-4 px-2 md:px-4 lg:px-6 lg:text-[20px] font-[600]">

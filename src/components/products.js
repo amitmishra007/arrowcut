@@ -17,15 +17,15 @@ const Products = ({ loc }) => {
     },
     {
       title: "Cutomized tool",
-      image: "/img/carbidedrillImg.png",
+      image: "/img/customizedTool.png",
     },
     {
       title: "Flat End Mill",
-      image: "/img/carbideEndMIllImg.png",
+      image: "/img/carbide-flat-end-mill.png",
     },
     {
       title: "Indexable tool",
-      image: "/img/carbideReamerImg.png",
+      image: "/img/indexableTool.png",
     },
   ];
   return (

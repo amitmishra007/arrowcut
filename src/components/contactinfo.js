@@ -30,11 +30,11 @@ const ContactInfo = () => {
                   alt="mail_us_img"
                   className="aspect-[3/3] w-12 lg:w-auto"
                 />
-                <span className="font-bold font-poppins text-[14px] md:text-base lg:text-[22px] pl-[0.625rem] pr-[2.25rem]">
+                <span className="font-bold font-poppins text-[14px] md:text-base lg:text-[22px] pl-[0.625rem] pr-[1.25rem]">
                   Mail Us
                 </span>
               </div>
-              <span className="text-sm">saasup@gmail.co</span>
+              <span className="text-sm">Info@arrow-cut.com</span>
             </div>
             <div className="bg-white w-full lg:w-auto mt-[1rem] lg:mt-auto flex justify-between items-center rounded max-h-[6.938rem] max-w-[26rem] py-[1rem] lg:py-[2.125rem] px-[1rem] lg:px-[2.125rem]">
               <div className="flex items-center">
